@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with JavaScript Validation</title>
+    <script>
+        // Function to validate form before submission
+        function validateForm() {
+            var title = document.getElementById("title").value;
+            var message = document.getElementById("message").value;
+            var error = "";
+
+            // Validate title
+            if (title === "") {
+                error += "Title is required.\n";
+            }
+
+            // Validate message
+            if (message === "") {
+                error += "Message is required.\n";
+            }
+
+            // If there's an error, alert the user and prevent submission
+            if (error !== "") {
+                alert("Error:\n" + error);
+                return false;
+            }
+            return true; // Allow submission if no error
+        }
+
+        // Function to dynamically show a preview of the entered title and message
+        function showPreview() {
+            var title = document.getElementById("title").value;
+            var message = document.getElementById("message").value;
+            document.getElementById("previewTitle").innerText = title;
+            document.getElementById("previewMessage").innerText = message;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Submit Your Thoughts</h2>
+<!-- Add onsubmit event to call the JavaScript validation function -->
+<form action="submitForm" method="post" onsubmit="return validateForm();">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" placeholder="Enter title" oninput="showPreview()" required><br><br>
+
+    <label for="message">Your message:</label>
+    <textarea id="message" name="message" rows="4" cols="50" placeholder="Write your thoughts here..." oninput="showPreview()" required></textarea><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Live Preview:</h3>
+<p><strong>Title:</strong> <span id="previewTitle"></span></p>
+<p><strong>Message:</strong> <span id="previewMessage"></span></p>
+
+<h3>Product Details</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Apple MacBook Pro 17"</td>
+            <td>Silver</td>
+            <td><a href="#">Laptop</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
