@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork-Like Landing Page</title>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f5f7;
+        color: #333;
+    }
+    
+    header {
+        background-color: white;
+        padding: 15px 20px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 24px;
+        color: #14a800;
+        font-weight: bold;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    .actions button {
+        border: none;
+        padding: 10px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    
+    .login {
+        background-color: white;
+        color: #14a800;
+        border: 2px solid #14a800;
+    }
+    
+    .signup {
+        background-color: #14a800;
+        color: white;
+    }
+    
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 20px;
+        background-color: #fff;
+    }
+    
+    .hero .content {
+        max-width: 600px;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .get-started {
+        padding: 15px 30px;
+        background-color: #14a800;
+        color: white;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .hero .image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+    }
+    
+    footer .trusted-by {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer .trusted-by p {
+        margin-right: 15px;
+    }
+    
+    footer .trusted-by img {
+        width: 100px;
+        margin: 0 10px;
+    }
+    
+    </style>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="bb.css">
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"><h1 style="color: yellowgreen;">Upwork</h1></a>
+        </div>
+    
+            <ul>
+                <li><a href="#">Find Talent</a></li>
+                <li><a href="#">Find Work</a></li>
+                <li><a href="#">Why Upwork?</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Enterprise</a></li>
+            </ul>
+        </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          
+          <div class="actions">
+            <button class="login">Log In</button>
+            <button class="signup">Sign Up</button>
+        </div>
+
+      </nav>
+
+
+
+
+
+
+
+
+
+      <section class="hero">
+        <div class="content">
+            <h1>How work <br>should work</h1>
+            <p>Forget the old rules. You can have the best people. Right now. Right here.</p>
+            <button class="get-started">Get Started</button>
+        </div>
+        <div class="image">
+            <!-- Placeholder for illustration -->
+            <img src="image.png" alt="Illustration of people collaborating"  aria-setsize="5cm">
+        </div>
+    </section>
+
+    <footer>
+        <div class="trusted-by">
+            <p>Trusted by:</p>
+            <img src="microsoft.png" alt="Microsoft">
+            <img src="airbnb.png" alt="Airbnb">
+            <img src="bissell.png" alt="Bissell">
+        </div>
+    </footer>
+    <Script>
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = e.target.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Log In button functionality
+    document.querySelector('.login').addEventListener('click', () => {
+        alert('Redirecting to login page...');
+        window.location.href = 'login.html'; // Change to actual login page
+    });
+    
+    // Sign Up button functionality
+    document.querySelector('.signup').addEventListener('click', () => {
+        alert('Redirecting to sign-up page...');
+        window.location.href = 'signup.html'; // Change to actual signup page
+    });
+    
+    // Get Started button functionality
+    document.querySelector('.get-started').addEventListener('click', () => {
+        alert('Welcome to the platform! Let’s get started.');
+        window.location.href = 'get-started.html'; // Change to actual Get Started page
+    });
+    </Script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
