@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+  
+    <style>
+
+
+
+
+.c
+{background-color: aqua;
+        color:khaki;
+    animation-play-state: running;
+
+font-size:3em ;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+.b{ position:absolute;
+    top: 10%;
+    left: 100%;
+    font-size: 8em;
+    font-weight: bold; 
+    font-style:initial;
+    animation: moveText 10s linear infinite;
+    align-self: center;
+    animation-delay: 0s;
+    white-space: nowrap;
+color: rgba(0,0,0,0.1);
+
+
+}
+    @keyframes moveText {
+        0%{left:100%;}
+        100%{left:-100%;}
+        
+    }
+.a{
+    background-color: khaki;
+}
+
+
+
+    h1 {  
+    text-decoration:underline solid green;
+    
+    padding: 10px;
+    width: 6cm   ;
+    color: blue;
+    border: 6px solid red ;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: rebeccapurple;
+    
+} 
+button{
+    text-decoration:underline solid red;
+    
+   text-align: center;
+    padding: 0.3cm; 
+    color: aqua;
+    background-color: bisque;
+    margin: 130px;
+    border: 8px solid blueviolet;
+    border-radius: 35px;
+}
+body{ 
+    
+    width:  12cm ;
+    border: 5px solid ;
+    border-radius: 5px;
+    background-size: 12cm; 
+    margin: auto;
+}
+    </style>
+    <script>
+        
+        function Guess(){
+            let a=Math.floor(Math.random()*9)+1;
+            let b=parseInt(prompt("Guess the number"));
+        if (b==a){
+            alert("Successfull your number is correct");
+        }
+else{
+    alert('incorrect  try again');
+
+ b=parseInt(prompt("Guess the number"));
+        if (b==a){
+            alert("Successfull your number is correct");
+        }
+else{
+    alert('incorrect  try again')
+}
+ b=parseInt(prompt("Guess the number"));
+        if (b==a){
+            alert("Successfull your number is correct");
+        }
+else{
+    alert('wrong , the correct number is  :'+a)
+}
+}}
+    </script>
+</head>
+<body style="background-color: bisque;">
+  
+   <div class="a"><h1 style="background-color:blueviolet">RANDOMING NUMBERS</h1>
+    <button style="background-color:orange;"   onclick="Guess()"><b>Start to guess <br> number</b></button>
+   </div>
+
+<div class="b">PROGRAM TO GUESS THE NUMBER</div>
+
+
+<div class="c"><marquee  style="flood-color: brown;">Ndabakunda mwese</marquee>
+</body>
+</html>
