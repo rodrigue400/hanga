@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startimes Webpage</title>
+
+    <style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f4f4f4;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+    
+    .menu span {
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    
+    section.content {
+        padding: 20px;
+    }
+    
+    .install-app {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .install-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .self-service {
+        margin: 20px 0;
+    }
+    
+    .recharge-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    
+    .movie-section h3 {
+        margin-bottom: 10px;
+    }
+    
+    .movies {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .movies img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="image1.jpg" alt="Startimes Logo">
+        </div>
+        <div class="menu">
+            <span>Home</span>
+            <span>Guide</span>
+            <span>Live</span>
+            <span>Search</span>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="install-app">
+            <img src="image5.jpg" alt="Startimes ON App">
+            <a href="#" class="install-btn">Install</a>
+        </div>
+
+        <div class="self-service">
+            <h2>Decoder Self-service</h2>
+            <a href="#" class="recharge-btn">RECHARGE</a>
+        </div>
+<img src="big.jpg" alt="">
+        <div class="movie-section">
+            <h3>Top Romance, Action Movies</h3>
+            <div class="movies">
+                <div> <img src="1.jpg" width="600"><img src="2.jpg" width="600"></div><br>
+                <div> <img src="3.jpg" width="600"><img src="4.jpg" width="600"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+console.log("Startimes page loaded");
+
+// You can handle actions here if you want the buttons to perform certain tasks
+document.querySelector('.install-btn').addEventListener('click', function() {
+    alert("Install the app from the app store!");
+});
+
+document.querySelector('.recharge-btn').addEventListener('click', function() {
+    alert("Recharge your decoder now!");
+});
+</scipt>
+</body>
+</html>
+
